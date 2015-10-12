@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  
   devise_for :users
+  
   get 'ratings/home'
+
+  get 'ratings/dashboard'
 
   get 'ratings/about'
 
