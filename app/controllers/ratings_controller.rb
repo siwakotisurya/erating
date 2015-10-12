@@ -2,6 +2,7 @@ class RatingsController < ApplicationController
   
   layout "rating"
 	def index
+		@header = 'header'
 	end
 
   def home
@@ -17,6 +18,7 @@ class RatingsController < ApplicationController
   end
 
   def dashboard
+  	@header = 'dashboard_header'
   end
 
 end
