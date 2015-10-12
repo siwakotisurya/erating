@@ -1,5 +1,6 @@
 class RatingsController < ApplicationController
   
+  layout "rating"
 	def index
 	end
 
