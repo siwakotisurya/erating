@@ -82,3 +82,6 @@ body {
 .container-fluid{
   background: black; 
 }
+.navbar-collapse.collapse{
+  background: green;
+}
