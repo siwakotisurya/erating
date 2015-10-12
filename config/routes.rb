@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'ratings/home'
+
+  get 'ratings/about'
+
+  get 'ratings/sign_up'
+
+  get 'ratings/sign_in'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
