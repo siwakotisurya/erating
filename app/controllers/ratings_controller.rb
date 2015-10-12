@@ -15,4 +15,8 @@ class RatingsController < ApplicationController
 
   def sign_in
   end
+
+  def dashboard
+  end
+
 end
