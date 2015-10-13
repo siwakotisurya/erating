@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to ratings_profile_path, :alert => exception.message
+    redirect_to ratings_judge_dashboard_path, :alert => exception.message
   end
 
 end

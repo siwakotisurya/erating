@@ -7,7 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<%if current_user.role=="admin"%>
 	<%=render "ratings/dashboard_header"%>
+	<%else%>
+	<%=render "ratings/judge_dashboard"%>
+	<%end%>
 	<%= yield %>
 </body>
 </html>
