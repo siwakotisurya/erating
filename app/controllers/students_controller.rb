@@ -10,10 +10,12 @@ class StudentsController < ApplicationController
 
   def new
     @student = Student.new
+    authorize! :dashboard, @student
   end
 
   def create
     @student = Student.new(set_db_field)
+    authorize! :dashboard, @student
     if @student.save
     end
   end
