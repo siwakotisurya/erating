@@ -20,11 +20,14 @@ class JudgesController < ApplicationController
   def create
   	@judge = User.new(set_db_field)
   	if @judge.save
+  	
+  	else
+  		redirect_to root_path
   	end
   end
 
   private def set_db_field
-  	params.permit(:user).require(:email, :encrypted_password, :address, :phone_number, :image)
+  	params.require(:user).permit(:email, :encrypted_password, :address, :phone_number, :image)
 	end
 
 end
