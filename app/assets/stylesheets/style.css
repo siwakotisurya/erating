@@ -86,3 +86,6 @@ h2{
 .navbar-default .navbar-collapse, .navbar-default .navbar-form{
 	padding-right: 105px;
 }
+body{
+	min-height: 1100px;
+}
