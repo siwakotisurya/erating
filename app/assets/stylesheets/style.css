@@ -83,3 +83,6 @@ h2{
   margin-left: 70px;
 	background-image: url('as.png');
 }
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	padding-right: 105px;
+}
