@@ -12,6 +12,7 @@ class StudentsController < ApplicationController
   end
 
   def create
+
   end
 
   def edit
@@ -19,4 +20,6 @@ class StudentsController < ApplicationController
 
   def delete
   end
+
+
 end
