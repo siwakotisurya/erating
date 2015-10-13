@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  
+  layout "dashboard"
   def index
   end
 
