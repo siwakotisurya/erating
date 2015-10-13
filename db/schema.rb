@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151013054441) do
+ActiveRecord::Schema.define(version: 20151013100140) do
 
   create_table "students", force: :cascade do |t|
     t.string   "full_name"
@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 20151013054441) do
   create_table "users", force: :cascade do |t|
     t.string   "email",                            default: "", null: false
     t.string   "encrypted_password",               default: "", null: false
-    t.string   "avatar"
     t.string   "address"
     t.integer  "phone_number",           limit: 8
     t.string   "reset_password_token"
