@@ -22,9 +22,9 @@ class JudgesController < ApplicationController
   	if @judge.save
   	end
   end
-  
+
   private def set_db_field
-  	params.permit(:judge).require(:email, :encrypted_password, :email, :phone_number, :image)
+  	params.permit(:user).require(:email, :encrypted_password, :email, :phone_number, :image)
 	end
 
 end
