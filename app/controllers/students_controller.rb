@@ -36,6 +36,7 @@ class StudentsController < ApplicationController
   end
 
   def rate_students
+    @students = Student.all
   end
 
 end
