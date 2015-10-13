@@ -10,7 +10,6 @@ body {
 	color:green;
 	font-weight: bold;
 	font-size: 20px;	
-
 	letter-spacing: 1.5px;
 }
 .navbar-default .navbar-nav>li>a{
@@ -52,13 +51,13 @@ body {
 	margin-bottom: 20px;  
 }
 .col-sm-4 h3{
-text-align: center;
+	text-align: center;
 }
 .col-sm-4 p{
-text-align: center;
+	text-align: center;
 }
 .feature_img{
-margin-left: 50px;
+	margin-left: 50px;
 }
 .col-sm-12 h3{
 	text-align: center;
@@ -77,10 +76,9 @@ h2{
 	margin: 0 auto;
 }
 #content_img{
- background-repeat:no-repeat;
-   margin-top: 130px;
-   min-height:400px;
-   	max-width:400px;
-	background-image: url(../img/as.png);
-	
+ 	background-repeat:no-repeat;
+  margin-top: 130px;
+  min-height:400px;
+  max-width:400px;
+	background-image: url('as.png');
 }
