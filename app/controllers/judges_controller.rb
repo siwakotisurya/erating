@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class JudgesController < ApplicationController
   
 	layout "dashboard"
   def index
