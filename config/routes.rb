@@ -1,16 +1,6 @@
 Rails.application.routes.draw do
   
-  get 'students/index'
-
-  get 'students/show'
-
-  get 'students/new'
-
-  get 'students/create'
-
-  get 'students/edit'
-
-  get 'students/delete'
+  resources :students
 
   resources :judges
 
