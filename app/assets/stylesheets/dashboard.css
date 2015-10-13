@@ -80,10 +80,10 @@ body {
  font-weight: 500;
 }
 .container-fluid{
-  background: black; 
+  background: #173C4E;; 
 }
 #dashboard_navbar{
-   background: black;
+   background: #1C4356;;
 }
 .profile_img{
   border-radius: 100px;
