@@ -88,6 +88,9 @@ body {
 .profile_img{
   border-radius: 100px;
   border-style: solid;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
+}
+.profile_detail{
+  margin-top: 20px;
 }
