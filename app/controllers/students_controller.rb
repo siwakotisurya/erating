@@ -21,7 +21,12 @@ class StudentsController < ApplicationController
   def edit
   end
 
-  def delete
+  def destroy
+    @student = Student.find(params[:id])
+    if @student.destroy
+      flash[:msg]="#{@student.full_name}  deleted"
+      redirect_to students_path
+    end
   end
 
   private def set_db_field
