@@ -18,6 +18,10 @@
 		<div class="form-group">
 		<%=f.text_field :phone_number, :class=>"form_control"%>
 		</div>
+		<label for="pwd">Upload Picture</label>
+		<div class="form-group">
+		<%=f.file_field :image, :class=>"form_control"%>
+		</div>
 		<div class="form-group">
 		<%=f.submit("Submit", :class=>"btn btn-primary")%>
 		</div>
