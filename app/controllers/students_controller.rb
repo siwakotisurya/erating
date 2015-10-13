@@ -2,6 +2,7 @@ class StudentsController < ApplicationController
   
   layout "dashboard"
   def index
+    @students = Student.all
   end
 
   def show
