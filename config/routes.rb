@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   resources :judges
 
   devise_for :users
-  
+
   get 'ratings/home'
 
+  get 'ratings/profile'
+  
   get 'ratings/dashboard'
 
   get 'ratings/about'
