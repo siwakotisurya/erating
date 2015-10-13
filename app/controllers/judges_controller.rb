@@ -24,7 +24,7 @@ class JudgesController < ApplicationController
   end
 
   private def set_db_field
-  	params.permit(:user).require(:email, :encrypted_password, :email, :phone_number, :image)
+  	params.permit(:user).require(:email, :encrypted_password, :address, :phone_number, :image)
 	end
 
 end
