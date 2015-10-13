@@ -2,9 +2,10 @@ Rails.application.routes.draw do
   
   resources :categories
 
-  resources :gradings
-
   resources :students do
+    member do 
+    resources :gradings
+    end
     collection do
       get :rate_students
     end
