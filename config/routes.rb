@@ -12,6 +12,13 @@ Rails.application.routes.draw do
 
   get 'ratings/sign_in'
 
+  devise_scope :user do
+
+  unauthenticated :user do
+    root :to => 'ratings#index', as: :unauthenticated_root
+  end
+end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
