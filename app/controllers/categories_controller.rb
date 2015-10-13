@@ -14,6 +14,11 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(set_db_field)
     if @category.save
+      flash[:message] = "Category Sucessfully created"
+      redirect_to new_category_path
+    else
+      flash[:message] = "Sorry category could not create"
+      redirect_to new_category_path
     end
   end
 

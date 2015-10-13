@@ -7,18 +7,6 @@ class RatingsController < ApplicationController
 		@header = 'header'
 	end
 
-  def home
-  end
-
-  def about
-  end
-
-  def sign_up
-  end
-
-  def sign_in
-  end
-
   def dashboard
   	@header = 'dashboard_header'
     authorize! :dashboard, @header
