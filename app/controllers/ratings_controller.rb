@@ -26,6 +26,7 @@ class RatingsController < ApplicationController
   def profile
     admin_id = current_user.id
     @admin_profile = User.find(admin_id)
+    @header = 'dashboard_header'
   end
 
 end
