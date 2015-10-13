@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151013045253) do
+ActiveRecord::Schema.define(version: 20151013054441) do
+
+  create_table "students", force: :cascade do |t|
+    t.string   "full_name"
+    t.integer  "phone_number",  limit: 8
+    t.string   "email_address"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                            default: "", null: false
