@@ -8,9 +8,13 @@ class CategoriesController < ApplicationController
   end
 
   def new
+    @category = Category.new
   end
 
   def create
+    @category = Category.new(set_db_field)
+    if @category.save
+    end
   end
 
   def edit
@@ -18,4 +22,9 @@ class CategoriesController < ApplicationController
 
   def destroy
   end
+
+  private def set_db_field
+     params.require(:category).permit(:name) 
+  end
+
 end
