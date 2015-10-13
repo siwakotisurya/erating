@@ -1,0 +1,32 @@
+<nav class="navbar-inverse navbar-fixed-top" id="dashboard_nav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Online Rating System</a>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row" >
+    <div class="col-sm-3 col-md-2 sidebar navbar-collapse collapse" id="dashboard_navbar">
+      <ul class="nav nav-sidebar">
+        <li class="active"><a href="#"> Dashboard <span class="sr-only">(current)</span></a></li>
+        <li><%=link_to("View Profile", ratings_profile_path)%></li>
+      </ul>
+      <ul class="nav nav-sidebar">
+        <li><a href="">View users Today's Status</a></li>
+        <li><%=link_to("Add Judges", new_judge_path)%></li>
+        <li><%=link_to("Add Students", new_student_path)%></li>
+        <li><%=link_to("View Students", students_path)%></li>
+      </ul>
+      <ul class="nav nav-sidebar">
+        <li> <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+      </ul>
+    </div>
+  </div>
+</div>
