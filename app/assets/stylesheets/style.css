@@ -19,7 +19,7 @@ body {
 	font-size: 15px;
 	letter-spacing: 1px;
 }
-.row{
+#row_content{
 	background-color: #5fcf80;
 	color: #FFF;
 	min-height: 600px;	
