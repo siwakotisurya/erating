@@ -2,6 +2,7 @@ class RatingsController < ApplicationController
   
 
   before_action :authenticate_user!, :only => [:dashboard]
+  
   layout "rating"
 	def index
 		@header = 'header'
