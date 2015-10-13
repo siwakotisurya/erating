@@ -14,6 +14,9 @@ Rails.application.routes.draw do
 
   devise_scope :user do
 
+  authenticated :user do
+    root :to => 'ratings#dashboard'
+  end
   unauthenticated :user do
     root :to => 'ratings#index', as: :unauthenticated_root
   end
@@ -23,7 +26,6 @@ end
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'ratings#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

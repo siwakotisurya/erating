@@ -1,5 +1,7 @@
 class RatingsController < ApplicationController
   
+
+  before_action :authenticate_user!, :except => [:about, :home]
   layout "rating"
 	def index
 		@header = 'header'
