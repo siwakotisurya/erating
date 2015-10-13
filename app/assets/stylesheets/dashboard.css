@@ -85,3 +85,9 @@ body {
 #dashboard_navbar{
    background: black;
 }
+.profile_img{
+  border-radius: 100px;
+  border-style: solid;
+  width: 100px;
+  height: 100px;
+}
