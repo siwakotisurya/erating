@@ -19,9 +19,7 @@
         <li><%=link_to("View Profile", ratings_profile_path)%></li>
       </ul>
       <ul class="nav nav-sidebar">
-        <li><a href="">View users Today's Status</a></li>
-        <li><%=link_to("View Students", students_path)%></li>
-        <li><%=link_to("Rate Students", students_path)%></li>
+      <li><%=link_to("Rate Students", students_path)%></li>
       </ul>
       <ul class="nav nav-sidebar">
         <li> <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
