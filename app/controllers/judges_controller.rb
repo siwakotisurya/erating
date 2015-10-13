@@ -14,6 +14,7 @@ class JudgesController < ApplicationController
   end
 
   def new
+  	@judge = User.new
   end
 
   def create
