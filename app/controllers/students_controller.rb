@@ -35,7 +35,7 @@ class StudentsController < ApplicationController
     params.require(:student).permit(:full_name, :email_address, :phone_number)
   end
 
-  def students
+  def rate_students
   end
 
 end

@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   
   resources :categories
 
-  resources :students
+  resources :students do
+    collection do
+      get :rate_students
+    end
+  end
 
   resources :judges
 
