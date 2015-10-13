@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get "/login" => "devise/sessions#new"
 
+  get "/signup" => "devise/registrations#new"
+
   authenticated :user do
     root :to => 'ratings#dashboard'
   end
