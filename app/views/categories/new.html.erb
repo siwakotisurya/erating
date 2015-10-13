@@ -1,5 +1,9 @@
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 	<h1 class="page-header"> Welcome To Dashboard</h1>
+	<div class="alert alert-success">
+    	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    	<strong>Success!</strong> This alert box could indicate a successful or positive action.
+  	</div>
 	<div class="form-group">
 	<%=form_for @category, url: {:action=>"create"}, html:{:role=>"form"} do |f|%>
 		<label for="email">Full Name:</label>
