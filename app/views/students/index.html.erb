@@ -17,7 +17,7 @@
         <td><%=s.email_address%></td>
         <td><%=s.phone_number%></td>
         <td><button class="btn btn-primary">Edit</button></td>
-      	<td><button class="btn btn-primary">Delete</button></td>
+      	<td><button class="btn btn-primary"><%=link_to("", student_path(s.id), {method: :delete})%>Delete</button></td>
       </tr>
    		<%end%>
     </tbody>
