@@ -31,6 +31,7 @@ class RatingsController < ApplicationController
   end
 
   def judge_dashboard
+    @header = 'judge_dashboard'
   end
 
 end
