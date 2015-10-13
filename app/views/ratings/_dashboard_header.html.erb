@@ -25,7 +25,7 @@
         <li><a href="">View Reports</a></li>
       </ul>
       <ul class="nav nav-sidebar">
-        <li><a href="">Logout</a></li>
+        <li> <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
       </ul>
     </div>
   </div>
