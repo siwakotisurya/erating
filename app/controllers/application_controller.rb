@@ -9,4 +9,8 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:address, :email, :password, :phone_number, :image) }
   end
 
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to ratings_profile_path, :alert => exception.message
+  end
+
 end
