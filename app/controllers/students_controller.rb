@@ -12,7 +12,9 @@ class StudentsController < ApplicationController
   end
 
   def create
-
+    @student = Student.new(set_db_field)
+    if @student.save
+    end
   end
 
   def edit
@@ -21,5 +23,8 @@ class StudentsController < ApplicationController
   def delete
   end
 
+  private def set_db_field
+    params.require(:student).permit(:full_name, :email_address, :phone_number)
+  end
 
 end
