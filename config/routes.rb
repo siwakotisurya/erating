@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   devise_scope :user do
 
+  get "/login" => "devise/sessions#new"
+
   authenticated :user do
     root :to => 'ratings#dashboard'
   end
