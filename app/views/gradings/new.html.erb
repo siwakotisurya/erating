@@ -9,7 +9,6 @@
     	<%end%>
   </div>
 	<div class="form-group">
-	<%=form_for @grading, url: {:action=>"create", :id=>@student.id}, html:{:role=>"form"} do |f|%>
 		<table class="table table-hover">
 		<thead>
      <tr>
@@ -21,13 +20,17 @@
 		<tbody>
 			<%@categories.each do |s|%>
       <tr>
-        <td><%=f.text_field :name, :class=>"form_control", :id=>"email", :disabled=>true, :value=>s.name%></td>
-      	<td><%=f.text_field :number, :class=>"form_control", :id=>"email"%></td>
+
+	<%=form_for @grading, url: {:action=>"create", :id=>@student.id}, html:{:role=>"form"} do |f|%>
+        <td><%=f.text_field :name, :class=>"form_control", :readonly=>true, :value=>s.name%></td>
+      	<td><%=f.text_field :number, :class=>"form_control"%></td>
       	<td><%=f.submit("Submit", :class=>"btn btn-primary")%></td>
-      </tr>
+      
    		<%end%>
+      </tr>
+    
+	<%end%>
     </tbody>
   </table>
-	<%end%>
 </div>
 </div>

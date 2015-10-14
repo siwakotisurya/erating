@@ -16,7 +16,7 @@
         <td><%=s.full_name%></td>
         <td><%=s.email_address%></td>
         <td><%=s.phone_number%></td>
-        <td><%= link_to "Grade Students", new_grading_path(s.id)%></td>
+        <td><%= link_to "Grade Students", new_student_grading_path(s.id)%></td>
       </tr>
    		<%end%>
     </tbody>
