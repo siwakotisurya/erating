@@ -1,3 +1,3 @@
 class Grading < ActiveRecord::Base
-	has_one :student
+	belongs_to :student
 end
