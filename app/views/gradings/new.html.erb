@@ -7,6 +7,13 @@
     	<strong>Category list for judging student</strong>
     	<%end%>
   </div>
+  <div class="error_form">
+  <% if flash[:error]%>
+  	<%flash[:error].each do |s|%>
+  		<%=s%>
+  	<%end%>
+  <%end%>
+  </div>
 	<div class="form-group">
 		<table class="table table-hover">
 		<thead>
@@ -19,7 +26,6 @@
 		<tbody>
 			<%@categories.each do |s|%>
       <tr>
-
 	<%=form_for @grading, url: student_gradings_path(@student.id), html:{:role=>"form"} do |f|%>
         <td><%=f.text_field :name, :class=>"form_control", :readonly=>true, :value=>s.name%></td>
       	<td><%=f.text_field :number, :class=>"form_control"%></td>

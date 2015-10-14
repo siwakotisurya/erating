@@ -18,6 +18,7 @@ class GradingsController < ApplicationController
     if @grading.save
     
     else
+      flash[:error]= @grading.errors.full_messages
       redirect_to new_student_grading_path 
     end 
   end

@@ -95,3 +95,6 @@ body {
 .profile_detail{
   margin-top: 20px;
 }
+.error_form{
+  color:red;
+}
