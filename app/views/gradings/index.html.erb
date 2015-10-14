@@ -1,29 +1,27 @@
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 	<h1 class="page-header"> Welcome To Dashboard</h1>
 	<div class="alert alert-success">
-	   	
-    	<strong>Student <%=@student.full_name%> Grading Details</strong>
+	  <strong>Student <%=@student.full_name%> Grading Details</strong>
   </div>
+
 	<div class="form-group">
 		<table class="table table-hover">
-		<thead>
-     <tr>
-       <th>Category Name</th>
+			<thead>
+     		<tr>
+       	<th>Category Name</th>
+       	<th>Total Marks</th>
         <th>Marks On Scale 1-10</th>
-        <th>Submit</th>
       </tr>
-    </thead>
-		<tbody>
-		
-      <tr>
-      <%@gradings.each do |s|%>
-       <td><%=s.name%></td>
-      	<td>asd</td>
-      	<td>asd</td>
-      <%end%>
-      </tr>
-
+    	</thead>
+			<tbody>
+			<%@gradings.each do |s|%>
+      	<tr>
+       	<td><%=s.name%></td>
+      	<td>10</td>
+      	<td><%=s.number%></td>
+      	</tr>
+			<%end%>
     </tbody>
   </table>
-</div>
+	</div>
 </div>
