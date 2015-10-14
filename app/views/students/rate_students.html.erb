@@ -8,6 +8,7 @@
         <th>Email</th>
         <th>Phone No</th>
         <th>Edit</th>
+        <th>View Grading History</th>
       </tr>
     </thead>
 		<tbody>
@@ -17,6 +18,7 @@
         <td><%=s.email_address%></td>
         <td><%=s.phone_number%></td>
         <td><%= link_to "Grade Students", new_student_grading_path(s.id)%></td>
+        <td><%= link_to "View Grading", student_gradings_path(s.id)%></td>
       </tr>
    		<%end%>
     </tbody>
