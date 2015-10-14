@@ -14,8 +14,11 @@ class GradingsController < ApplicationController
 
   def create
     @student = Student.find(params[:student_id])
-    grading = @student.gradings.new(set_db_field)
-    if grading.save
+    @grading = @student.gradings.new(set_db_field)
+    if @grading.save
+    
+    else
+      redirect_to new_student_grading_path 
     end 
   end
 
