@@ -2,8 +2,8 @@ class GradingsController < ApplicationController
   
   layout "dashboard"
   def index
-    student = Student.find(params[:student_id])
-    @gradings = student.gradings.all
+    @student = Student.find(params[:student_id])
+    @gradings = @student.gradings
   end
 
   def new

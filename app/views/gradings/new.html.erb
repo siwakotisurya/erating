@@ -21,14 +21,13 @@
 			<%@categories.each do |s|%>
       <tr>
 
-	<%=form_for @grading, url: {:action=>"create", :id=>@student.id}, html:{:role=>"form"} do |f|%>
+	<%=form_for @grading, url: student_gradings_path(@student.id), html:{:role=>"form"} do |f|%>
         <td><%=f.text_field :name, :class=>"form_control", :readonly=>true, :value=>s.name%></td>
       	<td><%=f.text_field :number, :class=>"form_control"%></td>
       	<td><%=f.submit("Submit", :class=>"btn btn-primary")%></td>
       
    		<%end%>
       </tr>
-    
 	<%end%>
     </tbody>
   </table>
