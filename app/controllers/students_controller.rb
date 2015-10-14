@@ -17,6 +17,8 @@ class StudentsController < ApplicationController
     @student = Student.new(set_db_field)
     authorize! :dashboard, @student
     if @student.save
+    else
+      render "new"
     end
   end
 

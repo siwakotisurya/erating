@@ -16,7 +16,7 @@ class GradingsController < ApplicationController
     @student = Student.find(params[:student_id])
     @grading = @student.gradings.new(set_db_field)
     if @grading.save
-    
+      flash[:message]= "Grade for #{@student.full_name} Sucessfully added"
     else
       flash[:error]= @grading.errors.full_messages
       redirect_to new_student_grading_path 

@@ -23,8 +23,8 @@ class JudgesController < ApplicationController
   	if @judge.save
   	
   	else
-      binding.pry
-  		redirect_to root_path
+      flash[:error]=@judge.errors.full_messages
+      redirect_to new_judge_path
   	end
   end
 
