@@ -19,9 +19,11 @@ class JudgesController < ApplicationController
 
   def create
   	@judge = User.new(set_db_field)
+
   	if @judge.save
   	
   	else
+      binding.pry
   		redirect_to root_path
   	end
   end
