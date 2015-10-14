@@ -1,2 +1,33 @@
-<h1>Gradings#new</h1>
-<p>Find me in app/views/gradings/new.html.erb</p>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+	<h1 class="page-header"> Welcome To Dashboard</h1>
+	<div class="alert alert-success">
+    	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    	<%if flash[:message]%>
+    	<strong><%=flash[:message]%></strong>
+    	<%else%>
+    	<strong>Enter Category Name to add Category</strong>
+    	<%end%>
+  </div>
+	<div class="form-group">
+	<%=form_for @grading, url: {:action=>"create", :id=>@student.id}, html:{:role=>"form"} do |f|%>
+		<table class="table table-hover">
+		<thead>
+     <tr>
+       <th>Category Name</th>
+        <th>Marks On Scale 1-10</th>
+        <th>Submit</th>
+      </tr>
+    </thead>
+		<tbody>
+			<%@categories.each do |s|%>
+      <tr>
+        <td><%=f.text_field :name, :class=>"form_control", :id=>"email", :disabled=>true, :value=>s.name%></td>
+      	<td><%=f.text_field :number, :class=>"form_control", :id=>"email"%></td>
+      	<td><%=f.submit("Submit", :class=>"btn btn-primary")%></td>
+      </tr>
+   		<%end%>
+    </tbody>
+  </table>
+	<%end%>
+</div>
+</div>
