@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
   def configure_permitted_parameters
-    # Fields for sign up
-    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:address, :email, :password, :phone_number, :image) }
+    role = "admin"
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:address, :email, :password, :phone_number, :image, :role) }
   end
 
   rescue_from CanCan::AccessDenied do |exception|

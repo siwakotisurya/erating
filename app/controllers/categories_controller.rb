@@ -18,7 +18,7 @@ class CategoriesController < ApplicationController
       redirect_to new_category_path
     else
       flash[:message] = "Sorry category could not create"
-      redirect_to new_category_path
+      render "new"
     end
   end
 

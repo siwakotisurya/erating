@@ -13,6 +13,7 @@ class GradingsController < ApplicationController
   end
 
   def create
+
     @student = Student.find(params[:student_id])
     @grading = @student.gradings.new(set_db_field)
     if @grading.save
@@ -30,6 +31,6 @@ class GradingsController < ApplicationController
   end
 
   private def set_db_field
-    params.require(:grading).permit(:name, :number)
+    params.require(:grading).permit(:name, :number, :judge_by)
   end
 end
