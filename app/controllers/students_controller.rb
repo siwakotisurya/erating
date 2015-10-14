@@ -5,9 +5,6 @@ class StudentsController < ApplicationController
     @students = Student.all
   end
 
-  def show
-  end
-
   def new
     @student = Student.new
     authorize! :dashboard, @student
@@ -17,12 +14,11 @@ class StudentsController < ApplicationController
     @student = Student.new(set_db_field)
     authorize! :dashboard, @student
     if @student.save
+      flash[:msg]="Student Sucessfully Created"
+      render "new"
     else
       render "new"
     end
-  end
-
-  def edit
   end
 
   def destroy

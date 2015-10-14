@@ -4,24 +4,13 @@ class JudgesController < ApplicationController
   def index
   end
 
-  def show
-  end
-
-  def edit
-  end
-
-  def delete
-  end
-
   def new
   	@judge = User.new
   end
 
   def create
   	@judge = User.new(set_db_field)
-
   	if @judge.save
-  	
   	else
       flash[:error]=@judge.errors.full_messages
       redirect_to new_judge_path

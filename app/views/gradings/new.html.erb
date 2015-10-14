@@ -2,9 +2,9 @@
 	<div class="alert alert-success">
     	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     	<%if flash[:message]%>
-    	<strong><%=flash[:message]%></strong>
+    		<strong><%=flash[:message]%></strong>
     	<%else%>
-    	<strong>Category list for judging student</strong>
+    		<strong>Category list for judging student</strong>
     	<%end%>
   </div>
   <div class = "error_form">
@@ -25,15 +25,14 @@
     </thead>
 		<tbody>
 			<%@categories.each do |s|%>
-      <tr>
-	<%=form_for @grading, url: student_gradings_path(@student.id), html:{:role=>"form"} do |f|%>
-        <td><%=f.text_field :name, :class=>"form_control", :readonly=>true, :value=>s.name%></td>
-      	<td><%=f.text_field :number, :class=>"form_control"%></td>
-      	<td><%=f.submit("Submit", :class=>"btn btn-primary")%></td>
-      
-   		<%end%>
-      </tr>
-	<%end%>
+	      <tr>
+					<%= form_for @grading, url: student_gradings_path(@student.id) do |f| %>
+		        <td><%=f.text_field :name, :class=>"form_control", :readonly=>true, :value=>s.name%></td>
+		      	<td><%=f.text_field :number, :class=>"form_control"%></td>
+		      	<td><%=f.submit("Submit", :class=>"btn btn-primary")%></td>
+	   			<%end%>
+	      </tr>
+			<%end%>
     </tbody>
   </table>
 </div>

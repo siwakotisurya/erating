@@ -7,6 +7,9 @@
 	<%end%>
 	<%end%>
 	</div>
+	<%if flash[:msg]%>
+		<%=flash[:msg]%>
+	<%end%>
 	<div class="form-group">
 	<%=form_for @student, url: {:action=>"create"}, html:{:role=>"form"} do |f|%>
 		<label for="email">Full Name:</label>

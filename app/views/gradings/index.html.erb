@@ -2,7 +2,6 @@
 	<div class="alert alert-success">
 	  <strong>Student <%=@student.full_name%> Grading Details</strong>
   </div>
-
 	<div class="form-group">
 		<table class="table table-hover">
 			<thead>
@@ -13,14 +12,19 @@
       </tr>
     	</thead>
 			<tbody>
-			<%@gradings.each do |s|%>
+			<%sum =0%>
+				<%@gradings.each do |s|%>
       	<tr>
        	<td><%=s.name%></td>
       	<td>10</td>
       	<td><%=s.number%></td>
+      	<%sum+=s.number%>
       	</tr>
 			<%end%>
     </tbody>
   </table>
+  <h4>Total Number of categories judged <%=@gradings.count%> </h4>
+  <h4>Total Number of Marks Obtained <%=sum%> </h4>
+  <h4>Marks Calculated in total marks Ten <%=sum/@gradings.count%> </h4>
 	</div>
 </div>

@@ -22,12 +22,6 @@ class CategoriesController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def destroy
-  end
-
   private def set_db_field
      params.require(:category).permit(:name) 
   end

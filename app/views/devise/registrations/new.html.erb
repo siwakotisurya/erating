@@ -34,6 +34,10 @@
     <%= f.label :image %><br />
     <%= f.file_field :image, autofocus: true %>
   </div>
+   <div class="field">
+    <p>Your Role Will Be Assign As Admin</p>
+    <%= f.text_field :role, :value=>"admin", :readonly=>true %>
+  </div>
   <div class="actions">
     <%= f.submit "Sign up", :class=>"btn btn-primary" %>
   </div>
